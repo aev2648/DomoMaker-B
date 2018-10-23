@@ -43,4 +43,4 @@ const makeDomo = (req, res) => {
 };
 
 module.exports.makerPage = makerPage;
-models.exports.make = makeDomo;
+module.exports.make = makeDomo;
