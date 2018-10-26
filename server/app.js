@@ -10,7 +10,7 @@ const session = require('express-session');
 
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
-const dbURL = process.env.MONGODB_URI || 'mongo://localhosrt/DomoMaker';
+const dbURL = process.env.MONGODB_URI || 'mongodb://localhost/DomoMaker';
 
 mongoose.connect(dbURL, (err) => {
   if (err) {
@@ -31,7 +31,7 @@ app.use(session({
   key: 'sessionid',
   secret: 'Domo Arigato',
   resave: true,
-  saveUnintialized: true,
+  saveUninitialized: true,
 }));
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
